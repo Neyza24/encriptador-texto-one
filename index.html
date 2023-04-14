@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Encriptador de texto</title>
+</head>
+
+<body>
+    <header class='header'>
+        <nav class="nav container">
+            <a href="index.html" class="nav__logo">ONENCRIPT</a>
+
+            <div class='nav-toggle'>
+                <ul class="nav__list grid">
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link active-link">HOME</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#about" class="nav__link">DARK</a>
+                    </li>
+                </ul>
+
+                <!-- <i class='bx bx-x nav__close' ></i> -->
+            </div>
+
+            <div class='nav__toggle'>
+                <i class='bx bx-menu'></i>
+            </div>
+        </nav>
+    </header>
+
+    <section class="contact section" id="contact">
+    
+        <h2 class="section__title">Tu herramienta aliada</h2>
+        <span class="section__subtitle">No más dolores de cabeza para encriptar o desecriptar textos, con ONECRIPT lo lográs en un par de clicks</span>
+    
+        <div class="contact__container container grid">
+            <div class="contact__content">
+    
+    
+                <form class="contact__form" onSubmit={onHandleSubmit}>
+    
+                    <div class="contact__form-div contact__form-area">
+                        <textarea name="message" cols="30" rows="10" class='contact__form-input'
+                            placeholder="Escribe tu mensajito aquí" value={formState.message} onChange={onInputChange}>
+                            </textarea>
+                    </div>
+    
+    
+                    <div class='alert alert-danger p-2 form-alert'>Solo letras minúsculas y sin acentos</div>
+    
+                    <button class="button button--flex" disabled={loading}>ENCRIPTAR</button>
+                    <button class="button button--flex" disabled={loading}>DESENCRIPTAR</button>
+    
+                </form>
+            </div>
+    
+            <div class="contact__content">
+                <div class="contact__info">
+                    <div class="contact__card">
+                        <i class='contact__card-icon'></i>
+    
+                        <a href='link ' target="_blank" class="contact__button" rel="noreferrer">Aqui va texto o imagen<i
+                                class="bx bx-right-arrow-alt contact__button-icon"></i> </a>
+                        
+                    </div>
+                    <button class="button button--flex" disabled={loading}>COPIAR</button>
+                </div>
+            </div>
+    
+        </div>
+    
+    </section>
+
+
+
+    <footer class='footer'>
+        <div class="footer__container container">
+
+            <div class="footer__copy">
+                <span class="footer__copy-text">Proyecto realizado con React </span>
+                <i class='bx bxl-react footer__copy-icon' ></i>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <script src="./js/app.js"></script>
+
+</body>
+
+</html>
