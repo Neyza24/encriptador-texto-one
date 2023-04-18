@@ -12,11 +12,11 @@
 
 <body>
     <header class='header'>
-        <nav class="nav container">
-            <a href="index.html" class="nav__logo">ONENCRIPT</a>
+        <nav class="nav ">
+            <a href="index.html" class="nav__logo">ALURA</a>
 
-            <div class='nav-toggle'>
-                <ul class="nav__list grid">
+            
+                <ul class="nav__list">
                     <li class="nav__item">
                         <a href="#home" class="nav__link active-link">HOME</a>
                     </li>
@@ -25,67 +25,66 @@
                         <a href="#about" class="nav__link">DARK</a>
                     </li>
                 </ul>
+            
 
-                <!-- <i class='bx bx-x nav__close' ></i> -->
-            </div>
-
-            <div class='nav__toggle'>
+            <!-- <div class='nav__toggle'>
                 <i class='bx bx-menu'></i>
-            </div>
+            </div> -->
         </nav>
     </header>
 
-    <section class="contact section" id="contact">
-    
-        <h2 class="section__title">Tu herramienta aliada</h2>
-        <span class="section__subtitle">No más dolores de cabeza para encriptar o desecriptar textos, con ONECRIPT lo lográs en un par de clicks</span>
-    
-        <div class="contact__container container grid">
-            <div class="contact__content">
-    
-    
-                <form class="contact__form" onSubmit={onHandleSubmit}>
-    
-                    <div class="contact__form-div contact__form-area">
-                        <textarea name="message" cols="30" rows="10" class='contact__form-input'
-                            placeholder="Escribe tu mensajito aquí" value={formState.message} onChange={onInputChange}>
-                            </textarea>
-                    </div>
-    
-    
-                    <div class='alert alert-danger p-2 form-alert'>Solo letras minúsculas y sin acentos</div>
-    
-                    <button class="button button--flex" disabled={loading}>ENCRIPTAR</button>
-                    <button class="button button--flex" disabled={loading}>DESENCRIPTAR</button>
-    
-                </form>
-            </div>
-    
-            <div class="contact__content">
-                <div class="contact__info">
-                    <div class="contact__card">
-                        <i class='contact__card-icon'></i>
-    
-                        <a href='link ' target="_blank" class="contact__button" rel="noreferrer">Aqui va texto o imagen<i
-                                class="bx bx-right-arrow-alt contact__button-icon"></i> </a>
+    <section class="encript section" id="encript">
+
+        <!-- <h4 class="section__title">Encriptador y Desencriptador de texto</h4> -->
+
+        <div class="encript__container container">
+
+                <div class="encript__input">
+
+                    <input name="textarea-input" class='encript__input-input' placeholder="Ingresa el texto aquí" autofocus  autocomplete="off"> </input>
                         
+                    <div class='encript_info-info'>
+                        <i class='bx bx-info-circle form__info-icon'></i> 
+                        <p>Solo letras minúsculas y sin acentos</p>
                     </div>
-                    <button class="button button--flex" disabled={loading}>COPIAR</button>
+
+                    <div class="encript__button">
+                        <button type="submit" class="button button--flex" id="encrypt">ENCRIPTAR</button>
+                      <button type="submit" class="button button--flex" id="decrypt">DESENCRIPTAR</button>
+
+                    </div>
+                    
+
                 </div>
+
+                <div class="encript__output" id="box-output">
+
+                    <div class="encript__output-div encript__output-area" >
+                        <h3 class="output__title">Ningun mensaje fue encontrado</h3>
+                        <p class="output__description">Ingresa el texto que deseas encriptar o desencriptar</p>
+                        <img src="./assets/girl.png" alt="Illustration" class="output__img"/>
+                    </div>
+
+                    <button class="button button--flex" id="copy">COPIAR</button>
+                    
+
+                    
+
+                </div>
+
+
+            
+
             </div>
-    
-        </div>
-    
+
     </section>
-
-
 
     <footer class='footer'>
         <div class="footer__container container">
 
             <div class="footer__copy">
                 <span class="footer__copy-text">Proyecto realizado con React </span>
-                <i class='bx bxl-react footer__copy-icon' ></i>
+                <i class='bx bxl-react footer__copy-icon'></i>
 
             </div>
 
